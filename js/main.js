@@ -2,7 +2,7 @@ const url = "http://www.omdbapi.com/?apikey=a7e8da44&";
 const app = document.getElementById("app");
 const modalWrapper = document.getElementById("modal-wrapper");
 const modal = document.getElementById("modal");
-const close = document.getElementById("close");
+let close = document.getElementById("close");
 let resp;
 
 async function getApi(uri){
@@ -50,6 +50,7 @@ const createMovie = (movie) => {
 
 async function openModal(movie) {
   modal.innerHTML = '<div class="close" id="close">+</div>';
+  close = document.getElementById("close")
   modalWrapper.style.display = "flex";
   close.addEventListener("click", (e) => {
     closeModal()
@@ -65,7 +66,7 @@ async function openModal(movie) {
     .then(response => response.json());
   console.log(response);
   let img = document.createElement("img")
-  w.appendChild(img);
+  w.appendChild(img); 
   img.classList.add("pic");
   img.src = response.Poster;
   let text = document.createElement("div");
