@@ -1,4 +1,4 @@
-const url = "http://www.omdbapi.com/?apikey=a7e8da44&";
+const url = "https://www.omdbapi.com/?apikey=a7e8da44&";
 const app = document.getElementById("app");
 const modalWrapper = document.getElementById("modal-wrapper");
 const modal = document.getElementById("modal");
